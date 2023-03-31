@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+  <style>
+    .article-card {
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <%- include('./partials/navbar.ejs') %>
+  
+  <div class="container">
+    <h1>Here are my Articles!</h1>
+    <div class="masonry-grid">
+    </div>
+  </div>
+  <script>
+    const articles = [
+      { title: 'Title 1', url: 'https://example.com/article-1' },
+      { title: 'Title 2', url: 'https://example.com/article-2' },
+      { title: 'Title 3', url: 'https://example.com/article-3' },
+      { title: 'Title 4', url: 'https://example.com/article-4' },
+      { title: 'Title 5', url: 'https://example.com/article-5' },
+      { title: 'Title 6', url: 'https://example.com/article-6' },
+      { title: 'Title 7', url: 'https://example.com/article-7' },
+      { title: 'Title 8', url: 'https://example.com/article-8' },
+      { title: 'Title 9', url: 'https://example.com/article-9' },
+      { title: 'Title 10', url: 'https://example.com/article-10' },
+    ];
+
+    const masonryGrid = document.querySelector('.masonry-grid');
+    articles.forEach((article) => {
+      const card = document.createElement('div');
+      card.classList.add('article-card');
+      card.style.height = getRandomSize();
+      card.style.backgroundColor = getRandomColor();
+
+      const link = document.createElement('a');
+      link.href = article.url;
+      link.textContent = article.title;
+      card.appendChild(link);
+
+      masonryGrid.appendChild(card);
+    });
+
+function getRandomColor() {
+
+  const r = Math.floor(Math.random() * 128) + 32; // Between 32 and 160
+  const g = Math.floor(Math.random() * 128) + 32; // Between 32 and 160
+  const b = Math.floor(Math.random() * 128) + 32; // Between 32 and 160
+  return `rgb(${r},${g},${b})`;
+}
+
+
+    function getRandomSize() {
+      const sizes = ['150px', '200px', '250px'];
+      return sizes[Math.floor(Math.random() * sizes.length)];
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const msnry = new Masonry(masonryGrid, {
+        itemSelector: '.article-card',
+        gutter: 0.5,
+        percentPosition: true,
+      });
+    });
+  </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

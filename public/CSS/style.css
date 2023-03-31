@@ -1,0 +1,304 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 5;
+  z-index: 100;
+  background-color: #a888bf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a888bf;
+  padding: 10px 20px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  padding: 70px 0 30px;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Home page styles */
+
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.home-container h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #646266;
+  margin-bottom: 1.5rem;
+}
+
+.home-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #646266;
+}
+
+.home-container a {
+  color: #2980b9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.home-container a:hover {
+  color: #3498db;
+}
+
+
+/* Add this at the end of your existing CSS */
+
+h2 {
+  text-align: center;
+  padding: 70px 0 30px;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0efe7;
+  background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png'); /* Add this line */
+}
+
+/* Add this to the end of your existing CSS */
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-icon {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav li {
+    margin: 0;
+  }
+}
+
+/* Add this to the end of your existing CSS */
+
+.nav-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-icon {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: #a888bf;
+  }
+}
+
+/* Add or update these styles in the style.css file */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+.main-content {
+  padding-top: 4rem; /* Adjust this value to create space between the navbar and content */
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+  width: calc(100% - 1.5rem);
+  /* padding: 4rem; */
+}
+
+embed {
+  margin-top: calc(83.33px);
+}
+
+.article-card {
+  padding: 0.2rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  width: calc(33.3% - 1.5rem);
+  margin-right: 1.5rem;
+  margin-bottom:2rem;
+}
+
+
+.article-card a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  line-height: 1;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* projects */
+.container {
+  margin-top: 83.333px;
+}
+
+#carousel {
+  position: relative;
+  margin:0 auto;
+  
+  max-width: 800px
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.carousel-item a{
+width: 100%;
+height:auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+
+
+
+

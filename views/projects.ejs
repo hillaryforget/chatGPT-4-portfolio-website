@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="container">
+      <h1>Here are my GitHub Projects!</h1>
+
+    <div style="margin:0 auto;width:fit-content;margin-bottom:1.5rem;">
+      You can find these project and many more at my <a target="_blank" href="https://github.com/hillaryforget">
+        GitHub profile
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+
+      <div id="carousel">
+        <div class="carousel-item active">
+          <a
+            href="https://github.com/hillaryforget"
+            target="_blank"
+          >
+            <img src="/images/github1.png" alt="Project 1" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://github.com/hillaryforget" target="_blank">
+            <img src="/images/github2.png" alt="Project 2" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://github.com/hillaryforget" target="_blank">
+            <img src="/images/github3.png" alt="Project 3" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/projects.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
