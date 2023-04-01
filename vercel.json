@@ -13,5 +13,34 @@
       "src": "/(.*)",
       "dest": "/app.js"
     }
+  ],
+  "headers": [
+    {
+      "source": "/public/css/:path*",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
+    },
+    {
+      "source": "/public/js/:path*",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/public/images/:path*.(jpg|jpeg|png|gif|svg|webp)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/:extension"
+        }
+      ]
+    }
   ]
 }
