@@ -1,6 +1,10 @@
 {
-  "version": 2,
-  "routes": [
+   "version": 2,
+   "name": "chat-gpt-portfolio-website",
+   "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
     {
       "src": "/public/(.*)",
       "dest": "/public/$1"
